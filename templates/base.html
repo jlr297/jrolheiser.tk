@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Jesse Rolheiser's Homepage</title>
+    <meta name="description" content="Homepage for Jesse Rolheiser" />
+    <meta name="keywords" content="jesse, rolheiser, jesse rolheiser, jlr297"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="shortcut icon" href="images/Icon.ico" >
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1><a href="/">Jesse Rolheiser</a></h1>
+                    <h2>jesse.rolheiser@usask.ca | (306)-715-0052 | Saskatoon, SK</h2>
+                </div>
+            </div>
+            <div id="menubar">
+                <ul id="menu">
+                    <li class="{{ 'selected' if page == 'index' else '' }}"><a href="/">About Me</a></li>
+                    <li class="{{ 'selected' if page == 'projects' else '' }}"><a href="/projects">Projects</a></li>
+                    <li class="{{ 'selected' if page == 'resume' else '' }}"><a href="/resume">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content_header"></div>
+
+        <div id="site_content">
+            <div id="sidebar_container">
+                {% block sidebar_content %}{% endblock sidebar_content %}
+            </div>
+            <div id="content">
+                {% block site_content %}{% endblock site_content %}
+            </div>
+        </div>          
+    </div>
+    <div id="content_footer"></div>
+
+    <div id="footer">
+        <br/>
+        <p>
+        <a href="/">About Me</a> | <a href="/projects">Projects</a> | <a href="/resume">Resume</a>
+        </p>
+    </div>
+</body>
+</html>
